@@ -19,15 +19,28 @@ apt install i3 feh conky scrot
 # scrot for screenshots
 # NetworkManager-gnome to manage network conections
 
+# discord
+pushd ~/Downloads
+wget -O discord-0.0.1.deb https://discordapp.com/api/download?platform=linux&format=deb
+apt install discord
+popd
 
 # spotify https://www.spotify.com/us/download/linux/
-sudo apt install spotify-client
+apt install spotify-client
 
 # apt install apt-transport-https curl gnupg
 apt install emacs sqlite3 rg
 
 # rust tools
 apt install llvm clang
+
+# npm, node via nvm
+# https://github.com/nvm-sh/nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+nvm install node
+
+# Near cli
+npm install -g near-cli
 
 # brave browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
@@ -45,5 +58,6 @@ apt install signal-desktop
 add-apt-repository ppa:atareao/telegram
 apt install telegram
 
-# remove unnecessary deps
-apt autoremove
+# apt trails latest git version by a couple years
+add-apt-repository ppa:git-core/ppa
+apt reinstall git
