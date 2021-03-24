@@ -61,3 +61,16 @@ apt install telegram
 # apt trails latest git version by a couple years
 add-apt-repository ppa:git-core/ppa
 apt reinstall git
+apt install gist
+
+# mail utility
+# apt install sendmail
+
+# ssl development library
+# apt install libssl-dev
+
+# export latex files
+apt install texlive-latex-base
+apt install texlive-fonts-recommended
+apt install texlive-fonts-extra # Fat, 1.6Gb
+apt install texlive-latex-extra
