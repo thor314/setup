@@ -5,6 +5,8 @@ ssh-keygen -t ed25519 -C thorck@protonmail.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 echo "Go enter your ssh key: https://github.com/settings/keys"
+# don't enter password every time I push:
+ssh-keygen -p -f /home/thor/.ssh/id_ed25519
 
 # gpg
 gpg --full-generate-key
