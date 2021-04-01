@@ -74,3 +74,8 @@ apt install texlive-latex-base
 apt install texlive-fonts-recommended
 apt install texlive-fonts-extra # Fat, 1.6Gb
 apt install texlive-latex-extra
+
+# zoom video conferencing
+wget https://zoom.us/client/latest/zoom_amd64.deb
+sudo dpkg -i zoom_amd64.deb
+sudo apt install -f
