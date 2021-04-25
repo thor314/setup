@@ -6,17 +6,16 @@ apt update
 apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# open pdfs w evince (popOS has evince by default)
-#apt install evince
+# open pdfs w evince
+apt install evince
 
 # i3 tiling window manager
-apt install i3 feh conky scrot
-# xbacklight set screen brightness (included in i3)
-# dmenu for to launch apps in the i3 desktop (included in i3)
+# rofi as dmenu replacement
+# scrot for screenshots
 # feh for wallpaper
+apt install i3 rofi feh conky scrot
 # dunst for notifications
 # conky to display information about system
-# scrot for screenshots
 # NetworkManager-gnome to manage network conections
 
 # discord
@@ -77,5 +76,32 @@ apt install texlive-latex-extra
 
 # zoom video conferencing
 wget https://zoom.us/client/latest/zoom_amd64.deb
-sudo dpkg -i zoom_amd64.deb
-sudo apt install -f
+dpkg -i zoom_amd64.deb
+apt install -f
+
+# brother printer
+# info: https://support.brother.com/g/b/downloadhowto.aspx?c=us&lang=en&prod=hll2350dw_us_eu_as&os=127&dlid=dlf006893_000&flang=4&type3=625
+wget https://download.brother.com/welcome/dlf006893/linux-brprinter-installer-2.2.2-2.gz
+gunzip linux-brprinter-installer-*.*.*-*.gz
+bash linux-brprinter-installer-*.*.*-*
+# Note: setup printer on wifi network then connect via IP address.
+
+# blog stuff: clipboard command line tool
+apt install xclip
+apt install hugo
+
+
+# if apt error: Target CNF is configured multiple times
+# wget https://github.com/davidfoerster/aptsources-cleanup/archive/refs/tags/v0.1.7.5.2.tar.gz
+# tar -xvf v0.1*
+# cd aptsources-cleanup-0.1.7.5.2
+# ./aptsources-cleanup
+
+## try very hard to get emojis.
+# sudo apt-add-repository ppa:eosrei/fonts\n
+# sudo apt update
+# apt install fonts-emojione
+## try2 emoji: use debian direct install.
+#git clone https://github.com/gentakojima/emojione-picker-ubuntu; cd emojione-picker-ubuntu
+#git checkout v0.1
+#./install.sh; cd ..
