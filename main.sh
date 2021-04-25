@@ -9,3 +9,7 @@
 
 # clone
 #./clone.sh
+
+# settings
+# allows hacky script to write brightness
+ chmod a+rw /sys/class/backlight/intel_backlight/brightness

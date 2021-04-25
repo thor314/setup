@@ -1,11 +1,12 @@
 #!/bin/bash
 
+# github ssh and gpg help: https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 # generate an ssh key for github
 ssh-keygen -t ed25519 -C thorck@protonmail.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 echo "Go enter your ssh key: https://github.com/settings/keys"
-# don't enter password every time I push:
+# run this command on each login to automate ssh key entry
 # ssh-keygen -f /home/thor/.ssh/id_ed25519
 
 # gpg
@@ -18,6 +19,7 @@ git config --global user.signingkey $pubkey
 git config --global gpg.program gpg
 # https://magit.vc/manual/ghub/Setting-the-Username.html#Setting-the-Username
 git config --global github.user thor314
+# git config --global user.email thorck@protonmail.com
 
 # create and store a
 # github personal access token
