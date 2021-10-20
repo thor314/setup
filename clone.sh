@@ -5,6 +5,7 @@ git clone git@github.com:thor314/org2.git
 mv org2 org
 cd org
 git clone git@github.com:thor314/thor-blog.git --recurse-submodules
+
 cd ~
 git clone git@github.com:thor314/emacs.git
 mv emacs .emacs.d

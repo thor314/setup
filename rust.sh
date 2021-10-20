@@ -11,13 +11,15 @@ mkdir r
 popd
 
 # rust analyzer
-git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+git clone https://github.com/rust-analyzer/rust-analyzer.git
+pushd rust-analyzer
 # xtask: https://github.com/matklad/cargo-xtask/
 # is a way to add automation to a rust project, a la make, npm run, scripts, etc.
 cargo xtask install --server
+popd
 
 # for near-indexer: https://github.com/near/near-indexer-for-wallet
-apt install postgresql libpq-dev
+apt install -y postgresql libpq-dev
 cargo install diesel_cli --no-default-features --features "postgres"
 
 # wasm

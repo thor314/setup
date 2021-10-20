@@ -95,7 +95,6 @@ bash linux-brprinter-installer-*.*.*-*
 apt -y install xclip
 apt -y install hugo
 
-
 # if apt -y error: Target CNF is configured multiple times
 # wget https://github.com/davidfoerster/aptsources-cleanup/archive/refs/tags/v0.1.7.5.2.tar.gz
 # tar -xvf v0.1*
@@ -110,3 +109,8 @@ apt -y install hugo
 #git clone https://github.com/gentakojima/emojione-picker-ubuntu; cd emojione-picker-ubuntu
 #git checkout v0.1
 #./install.sh; cd ..
+snap install chromium
+snap install notion-snap
+apt install python3-pip
+
+# excluded: Terra-station

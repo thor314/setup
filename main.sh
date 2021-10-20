@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # update git config, keys, github permissions
 ./keys.sh
 
@@ -12,4 +11,5 @@
 
 # settings
 # allows hacky script to write brightness
- chmod a+rw /sys/class/backlight/intel_backlight/brightness
+git config pull.rebase false
+# chmod a+rw /sys/class/backlight/intel_backlight/brightness
