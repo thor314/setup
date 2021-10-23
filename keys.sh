@@ -11,8 +11,8 @@ echo "Go enter your ssh key: https://github.com/settings/keys"
 
 # as of august 2021, github is more annoying than ever. do this.
 # https://github.com/microsoft/Git-Credential-Manager-Core#linux-install-instructions
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
+curl -sSL https://packages.microsoft.com/config/ubuntu/21.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 sudo apt-get update
 sudo apt-get install gcmcore
 git-credential-manager-core configure
