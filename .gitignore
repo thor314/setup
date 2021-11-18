@@ -2,3 +2,5 @@ rust-analyzer*
 mig*
 ghub*
 *.deb
+uninstaller_*
+linux-brprinter*
