@@ -16,6 +16,7 @@ curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/
 sudo apt-get update
 sudo apt-get install gcmcore
 git-credential-manager-core configure
+git config --global credential.credentialStore secretservice
 
 # gpg
 gpg --full-generate-key
