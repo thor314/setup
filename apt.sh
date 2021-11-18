@@ -114,3 +114,13 @@ snap install notion-snap
 apt install python3-pip
 
 # excluded: Terra-station
+apt install wmctrl
+
+# https://www.bitlbee.org/user-guide.html
+sudo apt install bitlbee
+purple-discord
+#https://github.com/EionRobb/purple-discord
+
+# install nyxt
+wget https://github.com/atlas-engineer/nyxt/releases/download/2.2.2/nyxt_2.2.2_amd64.deb
+apt install nyxt*.deb
