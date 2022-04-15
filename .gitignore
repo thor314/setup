@@ -1,6 +1,5 @@
-rust-analyzer*
-mig*
-ghub*
-*.deb
-uninstaller_*
-linux-brprinter*
+# Only my sh files, and gitignore. Use this directory as a temporary setup
+# directory.
+*
+!*.sh
+
